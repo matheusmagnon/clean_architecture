@@ -1,6 +1,4 @@
 {
-    "python.lintin.enabled": true,
-    "python.lintin.pylintEnable": true,
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
     "editor.trimAutoWhitespace": true,
@@ -10,6 +8,11 @@
     },
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    "files.exclude": {
+        "**/*.pyc": {"when": "$(basename).py"},
+        "**/__pycache__": true,
+        "**/*.pytest_cache": true,
+    }
   }
   
