@@ -13,6 +13,7 @@ disable=
       R0903, # too-few-public-methods
       E0401, # import-error
       E0402, #relative-beyond-top-level
+      W0622, #redefined-builtin
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
