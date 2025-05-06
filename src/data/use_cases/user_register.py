@@ -15,6 +15,8 @@ class UserRegister(UserRegisterInterface):
         self.__validate_name(last_name)
 
         self.__registry_user_information(first_name, last_name, age)
+        response = self.__format_reponse(first_name, last_name, age)
+        return response
 
     @classmethod
     def __validate_name(cls, first_name: str) -> None:
@@ -29,7 +31,7 @@ class UserRegister(UserRegisterInterface):
 
     @classmethod
     def __format_reponse(cls, first_name: str, last_name: str, age: int) -> Dict:
-        return {
+        response = {
             "type": "Users",
             "count": 1,
             "attributes": {
@@ -38,3 +40,4 @@ class UserRegister(UserRegisterInterface):
                 "age": age
             }
         }
+        return response
